@@ -6,6 +6,7 @@ import { protectedRoutes } from '../routes/userRoutes.js';
 import { patientRoutes } from '../routes/patientRoutes.js';
 import {  dietRoutes } from '../routes/dietRoutes.js';
 import { pantryRoutes } from '../routes/pantryRoutes.js';
+import { deliveryRoutes } from '../routes/deliveryRoutes.js';
 
 const app = express();
 app.use(cors(
@@ -26,4 +27,5 @@ app.use(cors(
  app.use("/api/patient" , patientRoutes);
 app.use ("/api/diets" , dietRoutes);
 app.use('/api/pantry', pantryRoutes);
+app.use('/api/delivery' , deliveryRoutes);
  export default app;
