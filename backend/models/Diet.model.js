@@ -4,7 +4,13 @@ const DietSchema =new mongoose.Schema({
     patientId :{
         type:mongoose.Schema.Types.ObjectId,
         ref : 'Patient',
+        required: true, 
     },
+    name: {
+        type:mongoose.Schema.Types.ObjectId,
+        ref : 'Patient',
+        required : true,
+    } ,
     morning: {
         meal: {
              type: String,
