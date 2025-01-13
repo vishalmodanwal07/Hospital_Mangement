@@ -1,6 +1,7 @@
 import express, { Router } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import {authRoutes} from '../routes/authRoutes.js'
 
 const app = express();
 app.use(cors(
@@ -15,9 +16,7 @@ app.use(cors(
 
  //routes
 
-//  const route =Router();
-//  app.use("/api/auth" , (req , res)=>{
-//     res.send("hello from auth");
-//  })
+
+ app.use("/api/auth" , authRoutes )
 
  export default app;
