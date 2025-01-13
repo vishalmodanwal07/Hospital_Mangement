@@ -34,7 +34,7 @@ router.route('/manager').get(verifyToken, authorizeRoles("Manager"), async (req,
 router.route('/pantry').get(verifyToken, authorizeRoles("Manager", "Pantry"), async (req, res) => {
     try {
         // Fetch pantry-related data from the database
-        const pantryData = await Pantry.find(); // Assuming Pantry is your model for pantry-related data
+        const pantryData = await PantryStaff.find(); // Assuming Pantry is your model for pantry-related data
 
         res.json({
             message: "Welcome Pantry",
