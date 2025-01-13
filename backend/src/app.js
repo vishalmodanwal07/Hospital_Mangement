@@ -2,6 +2,7 @@ import express, { Router } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import {authRoutes} from '../routes/authRoutes.js'
+import { protectedRoutes } from '../routes/userRoutes.js';
 
 const app = express();
 app.use(cors(
@@ -17,6 +18,7 @@ app.use(cors(
  //routes
 
 
- app.use("/api/auth" , authRoutes )
+ app.use("/api/auth" , authRoutes );
+ app.use("/api/users" , protectedRoutes);
 
  export default app;
